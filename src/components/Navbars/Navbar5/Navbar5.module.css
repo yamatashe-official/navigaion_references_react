@@ -18,6 +18,7 @@
 .logo {
   height: 70%;
   filter: invert(1);
+  transition: 0.3s ease;
 }
 .ctaButton {
   background: white;
@@ -40,10 +41,11 @@
 }
 
 .name {
-  margin: 0px 15px;
+  margin: 0px 10px;
   color: white;
   font-weight: bold;
   transition: 0.3s ease;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 .name:hover {
   cursor: pointer;
@@ -73,4 +75,28 @@
 .socialIcons:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 800px) {
+  .overall {
+    grid-template-columns: 1fr;
+    height: 90px;
+  }
+  .gridCenter,
+  .gridRight {
+    display: none;
+  }
+
+  .gridLeft {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .ctaButton {
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  .logo {
+    height: 50%;
+  }
 }
