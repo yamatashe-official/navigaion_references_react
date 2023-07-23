@@ -1,0 +1,76 @@
+.overall {
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0px 10px;
+}
+
+.gridLeft,
+.gridCenter,
+.gridRight {
+  display: flex;
+  align-items: center;
+}
+
+/*below is all the elements for gridLeft*/
+
+.logo {
+  height: 70%;
+  filter: invert(1);
+}
+.ctaButton {
+  background: white;
+  color: black;
+  border-radius: 50px;
+  padding: 5px 15px;
+  font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+  font-weight: bold;
+  margin-left: 5px;
+}
+.ctaButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* below is all the elements for gridCenter*/
+
+.gridCenter {
+  justify-content: center;
+}
+
+.name {
+  margin: 0px 15px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.name:hover {
+  cursor: pointer;
+  /* transform: scale(1.05); */
+  border: 2px solid white;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+.icon:hover,
+.icon:focus {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* below is all the elements for gridRight*/
+
+.gridRight {
+  justify-content: flex-end;
+}
+.socialIcons {
+  width: 20px;
+  filter: invert(1);
+  margin: 0px 10px;
+}
+
+.socialIcons:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}

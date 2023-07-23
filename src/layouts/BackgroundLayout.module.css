@@ -1,0 +1,68 @@
+.overall {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.buttonLeft,
+.buttonRight {
+  background: rgba(196, 196, 196, 0.483);
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  transition: 0.3s ease;
+  background-image: url("/public/assets/icons/arrow-right-solid.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(1);
+  border-radius: 10px 0px 0px 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0px;
+}
+
+.buttonRight {
+  right: 0;
+}
+
+.buttonLeft {
+  transform: rotate(180deg);
+}
+
+.buttonLeft:hover,
+.buttonRight:hover,
+.buttonLeft:focus,
+.buttonRight:focus,
+.buttonLeft:active,
+.buttonRight:active {
+  cursor: pointer;
+  opacity: 0.9;
+  width: 55px;
+  height: 105px;
+}
+
+.image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: 1s ease;
+}
+
+.image:hover {
+  cursor: default;
+  transform: scale(1.01);
+}
+
+.loader,
+.image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}

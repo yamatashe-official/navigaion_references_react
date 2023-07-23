@@ -1,0 +1,139 @@
+.overall {
+  width: 100%;
+  height: 80px;
+  /* background: red; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0px 10px;
+}
+
+.gridLeft,
+.gridCenter,
+.gridRight {
+  display: flex;
+  align-items: center;
+}
+
+/* all this below is for grid left elements*/
+
+.logo {
+  height: 60%;
+  filter: invert(1);
+}
+.logo:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.searchInputContainer {
+  position: relative;
+  margin-left: 10px;
+}
+
+.searchInput {
+  border-radius: 50px;
+  padding: 8px 0px 8px 30px;
+  transition: 0.3s ease;
+  position: relative;
+  outline: none;
+  border: 1px solid white;
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  color: white;
+}
+
+.searchInputIcon {
+  height: 15px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  opacity: 0.5;
+  filter: invert(1);
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+/*all this is for grid center elements*/
+.gridCenter {
+  justify-content: center;
+}
+.link {
+  margin: 0px 10px;
+  color: white;
+  transition: 0.3s ease;
+  font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+  font-weight: bold;
+}
+.linkIcon {
+  height: 20%;
+}
+
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkContainer:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  /* opacity: 0.9; */
+}
+
+.linkIcon {
+  height: 20px;
+  margin-bottom: 5px;
+  filter: invert(1);
+}
+
+/* all this is for grid right elements*/
+
+.gridRight {
+  justify-content: flex-end;
+}
+
+.ctaButton {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: white;
+  /* border: 1px solid white; */
+  color: black;
+  transition: 0.3s ease;
+  font-weight: bold;
+  font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.ctaButton:hover {
+  cursor: pointer;
+  /* opacity: 0.9; */
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .overall {
+    grid-template-columns: 1fr;
+  }
+  .gridCenter {
+    display: none;
+  }
+  .searchInputContainer {
+    display: none;
+  }
+  .gridRight {
+    display: none;
+  }
+
+  .gridLeft {
+    justify-content: center;
+    margin: 0;
+  }
+}
